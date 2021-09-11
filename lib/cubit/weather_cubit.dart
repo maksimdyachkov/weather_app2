@@ -20,10 +20,10 @@ class WeatherCubit extends HydratedCubit<WeatherState> {
   void handleClick(String value) {
     switch (value) {
       case 'Дни':
-        emit(state.copyWith(weather: state.weather.copyWith(isDaily: false)));
+        emit(state.copyWith(weather: state.weather.copyWith(isDaily: true)));
         break;
       case 'Часы':
-        emit(state.copyWith(weather: state.weather.copyWith(isDaily: true)));
+        emit(state.copyWith(weather: state.weather.copyWith(isDaily: false)));
         break;
       case 'Hours':
        emit(state.copyWith(weather: state.weather.copyWith(isDaily: false)));
